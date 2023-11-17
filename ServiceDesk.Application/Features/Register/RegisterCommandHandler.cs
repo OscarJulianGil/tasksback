@@ -1,5 +1,6 @@
 ﻿using System;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using ServiceDesk.Application.Features.GenerateJWT;
 using ServiceDesk.Application.Helpers;
 using ServiceDesk.Domain.Models;
@@ -29,12 +30,17 @@ namespace ServiceDesk.Application.Features.Register
                     Message = "This email is already registered"
                 };
 
-            
 
+
+            var hashedPassword = new PasswordHasher<object?>().HashPassword(null, request.Password);
             User newUser = new User();
             newUser.Email = request.Email;
             newUser.Name = request.Name;
-            newUser.Password = request.Password;
+            newUser.Password = hashedPassword;
+
+
+            
+
 
             db.Users.Add(newUser);
             await db.SaveChangesAsync();
