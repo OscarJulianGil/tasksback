@@ -1,0 +1,59 @@
+﻿<Properties StartupConfiguration="{E7BDDB58-E6BF-4D53-85B2-DA827B59B379}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ServiceDesk.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ServiceDesk.API/Program.cs">
+    <Files>
+      <File FileName="ServiceDesk.Application/Features/Tasks/CreateTask/CreateTaskCommandHandler.cs" Line="17" Column="1" />
+      <File FileName="ServiceDesk.Application/Features/Tasks/SelectByUserId/SelectByUserIdResponse.cs" Line="17" Column="40" />
+      <File FileName="ServiceDesk.Domain/Models/Task.cs" Line="19" Column="1" />
+      <File FileName="ServiceDesk.Infrastructure/Repository/ServiceDeskDbContext.cs" Line="30" Column="82" />
+      <File FileName="ServiceDesk.Application/Features/Tasks/SelectByUserId/SelectByUserIdQueryHandler.cs" Line="29" Column="45" />
+      <File FileName="ServiceDesk.Application/Features/Tasks/CompleteTask/CompleteTaskRequest.cs" Line="7" Column="66" />
+      <File FileName="ServiceDesk.Application/Features/Tasks/CompleteTask/CompleteTaskCommandHandler.cs" Line="15" Column="10" />
+      <File FileName="ServiceDesk.API/Controllers/TaskController.cs" Line="68" Column="1" />
+      <File FileName="ServiceDesk.API/Controllers/LoginController.cs" Line="45" Column="1" />
+      <File FileName="ServiceDesk.API/Controllers/CategoryController.cs" Line="24" Column="20" />
+      <File FileName="ServiceDesk.Application/Features/Register/RegisterRequest.cs" Line="6" Column="31" />
+      <File FileName="ServiceDesk.Application/Features/Register/RegisterResponse.cs" Line="9" Column="17" />
+      <File FileName="ServiceDesk.Application/Features/Register/RegisterCommandHandler.cs" Line="48" Column="19" />
+      <File FileName="ServiceDesk.Application/Features/Login/LoginCommandHandler.cs" Line="17" Column="38" />
+      <File FileName="ServiceDesk.Application/Features/Tasks/SelectByUserId/SelectByUserIdRequest.cs" Line="6" Column="55" />
+      <File FileName="ServiceDesk.API/Program.cs" Line="70" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ServiceDesk" expanded="True">
+            <Node name="ServiceDesk.API" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="ServiceDesk.Application" expanded="True">
+              <Node name="Features" expanded="True">
+                <Node name="GenerateJWT" expanded="True" />
+                <Node name="Login" expanded="True" />
+                <Node name="Register" expanded="True" />
+                <Node name="Tasks" expanded="True">
+                  <Node name="CompleteTask" expanded="True" />
+                  <Node name="CreateTask" expanded="True" />
+                  <Node name="SelectByUserId" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="ServiceDesk.Domain" expanded="True">
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="ServiceDesk.Infrastructure" expanded="True">
+              <Node name="Repository" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

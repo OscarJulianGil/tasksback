@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Features\" />
+    <None Remove="Features\Login\" />
+    <None Remove="Helpers\" />
+    <None Remove="Enums\" />
+    <None Remove="Features\GenerateJWT\" />
+    <None Remove="Features\Tasks\" />
+    <None Remove="Features\Tasks\SelectById\" />
+    <None Remove="Features\Tasks\CreateTask\" />
+    <None Remove="Features\Categories\" />
+    <None Remove="Features\Categories\SelectAll\" />
+    <None Remove="Features\Tasks\SelectByUserId\" />
+    <None Remove="Features\Tasks\DeleteById\" />
+    <None Remove="Features\Tasks\CompleteTask\" />
+    <None Remove="Features\Register\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Features\Login\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Features\GenerateJWT\" />
+    <Folder Include="Features\Tasks\" />
+    <Folder Include="Features\Tasks\SelectById\" />
+    <Folder Include="Features\Tasks\CreateTask\" />
+    <Folder Include="Features\Categories\" />
+    <Folder Include="Features\Categories\SelectAll\" />
+    <Folder Include="Features\Tasks\SelectByUserId\" />
+    <Folder Include="Features\Tasks\DeleteById\" />
+    <Folder Include="Features\Tasks\CompleteTask\" />
+    <Folder Include="Features\Register\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceDesk.Infrastructure\ServiceDesk.Infrastructure.csproj" />
+    <ProjectReference Include="..\ServiceDesk.Domain\ServiceDesk.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+  </ItemGroup>
+</Project>
