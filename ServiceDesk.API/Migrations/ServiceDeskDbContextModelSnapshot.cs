@@ -44,6 +44,26 @@ namespace ServiceDesk.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("94edbbb7-a010-4c0d-89a6-f1fcddc94def"),
+                            Active = true,
+                            Name = "Hogar"
+                        },
+                        new
+                        {
+                            Id = new Guid("2efc562d-6bea-4b88-8c5e-0cb08dc377c0"),
+                            Active = true,
+                            Name = "Viajes"
+                        },
+                        new
+                        {
+                            Id = new Guid("6dc5954b-e184-407e-9a09-ab4e0596590c"),
+                            Active = true,
+                            Name = "Navidad"
+                        });
                 });
 
             modelBuilder.Entity("ServiceDesk.Domain.Models.Task", b =>

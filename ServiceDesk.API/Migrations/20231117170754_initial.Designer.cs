@@ -12,8 +12,8 @@ using ServiceDesk.Infrastructure.Repository;
 namespace ServiceDesk.API.Migrations
 {
     [DbContext(typeof(ServiceDeskDbContext))]
-    [Migration("20231117144410_initial_field")]
-    partial class initial_field
+    [Migration("20231117170754_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,26 @@ namespace ServiceDesk.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("94edbbb7-a010-4c0d-89a6-f1fcddc94def"),
+                            Active = true,
+                            Name = "Hogar"
+                        },
+                        new
+                        {
+                            Id = new Guid("2efc562d-6bea-4b88-8c5e-0cb08dc377c0"),
+                            Active = true,
+                            Name = "Viajes"
+                        },
+                        new
+                        {
+                            Id = new Guid("6dc5954b-e184-407e-9a09-ab4e0596590c"),
+                            Active = true,
+                            Name = "Navidad"
+                        });
                 });
 
             modelBuilder.Entity("ServiceDesk.Domain.Models.Task", b =>
@@ -70,17 +90,17 @@ namespace ServiceDesk.API.Migrations
                     b.Property<DateTime>("FinishLimitResponse")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsCompleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.Property<string>("TaskName")
                         .IsRequired()
                         .HasColumnType("varchar(200)");
 
                     b.Property<Guid>("UserAssignedId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("isCompleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
 
                     b.HasKey("Id");
 

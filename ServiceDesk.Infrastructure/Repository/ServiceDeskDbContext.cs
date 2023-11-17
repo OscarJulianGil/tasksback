@@ -40,6 +40,12 @@ namespace ServiceDesk.Infrastructure.Repository
 
             modelBuilder.Entity<Domain.Models.Task>().Property(b => b.TaskName).HasColumnType("varchar(200)");
             modelBuilder.Entity<Domain.Models.Task>().Property(b => b.Description).HasColumnType("varchar(500)");
+
+
+            //initial data
+            modelBuilder.Entity<Category>().HasData(new { Id = Guid.NewGuid(), Name = "Hogar", Active=true },
+                                                    new { Id = Guid.NewGuid(), Name = "Viajes", Active = true },
+                                                    new { Id = Guid.NewGuid(), Name = "Navidad", Active = true });
         }
     }
 }
